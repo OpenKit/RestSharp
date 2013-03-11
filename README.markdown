@@ -1,3 +1,9 @@
+```
+	~/dev/OK/UnitySample $ cat Assets/smcs.rsp
+	-define:DEBUG;UNITY
+```
+
+
 # RestSharp - Simple .NET REST Client
 
 ### [Official Site/Blog][1] - [@RestSharp][2]  
