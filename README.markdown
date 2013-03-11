@@ -3,6 +3,11 @@
 	-define:DEBUG;UNITY
 ```
 
+To build for Unity, compile with: 
+```
+	/Applications/Unity/Unity.app/Contents/Frameworks/Mono/bin/gmcs -target:library -define:UNITY -r:/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEngine.dll -recurse:RestSharp/*.cs -out:RestSharp.dll
+```
+
 
 # RestSharp - Simple .NET REST Client
 
