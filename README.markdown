@@ -1,3 +1,8 @@
+Unity Notes
+----------
+
+Works with JSON only!  XML related features are commented out.
+
 ```
 	~/dev/OK/UnitySample $ cat Assets/smcs.rsp
 	-define:DEBUG;UNITY
