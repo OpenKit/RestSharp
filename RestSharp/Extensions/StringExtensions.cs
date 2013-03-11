@@ -29,7 +29,7 @@ using System.Windows.Browser;
 #if WINDOWS_PHONE
 #endif
 
-#if FRAMEWORK || MONOTOUCH || MONODROID
+#if FRAMEWORK || MONOTOUCH || MONODROID || UNITY
 using RestSharp.Contrib;
 #endif
 

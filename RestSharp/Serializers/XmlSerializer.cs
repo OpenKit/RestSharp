@@ -14,6 +14,7 @@
 //   limitations under the License. 
 #endregion
 
+#if !UNITY
 using System;
 using System.Collections;
 using System.Linq;
@@ -195,3 +196,4 @@ namespace RestSharp.Serializers
 		public string ContentType { get; set; }
 	}
 }
+#endif

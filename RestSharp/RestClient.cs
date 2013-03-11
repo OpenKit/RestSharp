@@ -50,12 +50,16 @@ namespace RestSharp
 
 			// register default handlers
 			AddHandler("application/json", new JsonDeserializer());
+#if !UNITY
 			AddHandler("application/xml", new XmlDeserializer());
+#endif
 			AddHandler("text/json", new JsonDeserializer());
 			AddHandler("text/x-json", new JsonDeserializer());
 			AddHandler("text/javascript", new JsonDeserializer());
+#if !UNITY
 			AddHandler("text/xml", new XmlDeserializer());
 			AddHandler("*", new XmlDeserializer());
+#endif
 
 			FollowRedirects = true;
 		}

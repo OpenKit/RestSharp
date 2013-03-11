@@ -53,7 +53,9 @@ namespace RestSharp
 		{
 			Parameters = new List<Parameter>();
 			Files = new List<FileParameter>();
+#if !UNITY
 			XmlSerializer = new XmlSerializer();
+#endif
 			JsonSerializer = new JsonSerializer();
 
 			OnBeforeDeserialization = r => { };

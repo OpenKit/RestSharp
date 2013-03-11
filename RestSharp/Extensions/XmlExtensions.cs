@@ -14,6 +14,7 @@
 //   limitations under the License. 
 #endregion
 
+#if !UNITY
 using System.Xml.Linq;
 
 namespace RestSharp.Extensions
@@ -39,3 +40,5 @@ namespace RestSharp.Extensions
 		}
 	}
 }
+
+#endif
