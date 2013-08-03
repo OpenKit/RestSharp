@@ -169,9 +169,16 @@ namespace RestSharp.Authenticators
 			{
 				parameters.Add( new WebPair( p.Name, p.Value.ToString() ) );
 			}
-			foreach (var p in request.Parameters.Where(p => p.Type == ParameterType.GetOrPost))
-			{
-				parameters.Add(new WebPair(p.Name, p.Value.ToString()));
+
+			// LZELL
+			// This ridiculous hack (wrapping the foreach in a file count check) is to prevent RestSharp from
+			// including POST params in the oauth base signature when POSTing a multipart form.  Ruby's oauth
+			// gem doesn't include them in the base signature.  Who knows which one is correct in its implementation.
+			if (request.Files.Count == 0) {
+				foreach (var p in request.Parameters.Where(p => p.Type == ParameterType.GetOrPost))
+				{
+					parameters.Add(new WebPair(p.Name, p.Value.ToString()));
+				}
 			}
 
 			switch (Type)
